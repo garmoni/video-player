@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="shortcut icon" href="#" />
+  <title>Відео Програвач</title>
+</head>
+
+<body>
+  <div id="video" class="video video--hover">
+    <div class="video__container">
+      <video id="videoPlayer" class="video__player" autoplay="">
+        <source src="https://ukrainiandigital.com/wp-content/uploads/2023/06/Myroslava-Tkachuk_-Co-Founder-pro-UDC-2.mp4"
+          type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="controls">
+        <button id="playBtn" class="btn btn--play-stop">
+          <img id="playIcon" src="./img/pause.svg" alt="Play">
+        </button>
+        <button id="closeBtn" class="btn btn--close">
+          <img src="./img/close.svg" alt="Play">
+        </button>
+      </div>
+      <div class="join-btn" id="joinBtn">
+        <a href="#join">Приєднатися</a>
+      </div>
+    </div>
+  
+    <p class="video__text">Звернення від CEO</p>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>

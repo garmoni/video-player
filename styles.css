@@ -1,0 +1,116 @@
+body {
+  display: flex;
+  height: 100vh;
+  margin: 0;
+  font-family: montserrat, sans-serif; 
+}
+
+.video {
+  position: fixed;
+  width: 130px;
+  height: 290px;
+  left: 25px;
+  bottom: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform .5s;
+}
+
+.video__container {
+  width: 100%;
+  position: relative;
+}
+
+.video--hover:hover{
+  transform: scale(1.1);
+}
+
+.video__player {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform .3s;
+}
+
+.video__container:hover > .controls .btn {
+  transform: scale(1);
+  opacity: 0.8;
+}
+
+.controls {
+  position: absolute;
+  width: 45px;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  justify-content: end;
+  z-index: 10;
+}
+
+.btn {
+  position: absolute;
+  z-index: 25;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  padding: 3px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: scale(0);
+  cursor: pointer;
+  fill: #fff;
+  transition-property: transform, opacity, background;
+  transition-duration: var(--tr-time);
+  transition-timing-function: var(--tr-type);
+}
+
+.btn--play-stop {
+  left: 0;
+}
+
+.btn img {
+  max-width: 100%;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+.join-btn {
+  position: absolute;
+  z-index: 100;
+  left: 15px;
+  bottom: 15px;
+  max-width: calc(100% - 30px);
+  width: 100%;
+  box-sizing: border-box;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  min-height: 50px;
+  padding: 10px 5px;
+  font-weight: 800;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #ffda0b;
+  border-radius: 10px;
+}
+
+.join-btn a {
+  color: #000;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.video__text {
+  font-size: 12px;
+  font-weight: 800;
+}
